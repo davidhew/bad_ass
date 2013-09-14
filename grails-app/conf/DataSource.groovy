@@ -69,42 +69,11 @@ environments {
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:mysql://localhost/bad_ass?useUnicode=true&amp;characterEncoding=utf-8"
+			url = "jdbc:mysql://localhost/bad_ass_prod?useUnicode=true&amp;characterEncoding=utf-8"
 			username = "pure_water"
 			password = "1345&*eqte"
 
-			//            dbCreate = "update"
-			//            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-			//            pooled = true
-			//            properties {
-			//               maxActive = -1
-			//               minEvictableIdleTimeMillis=1800000
-			//               timeBetweenEvictionRunsMillis=1800000
-			//               numTestsPerEvictionRun=3
-			//               testOnBorrow=true
-			//               testWhileIdle=true
-			//               testOnReturn=true
-			//               validationQuery="SELECT 1"
 		}
 	}
-	production_admin {
-		dataSource {
-			url = "jdbc:mysql://121.199.42.155/ccclubs"
-			username = "ccclubsdb"
-			password = "NmUPoH6VEnuq8Y"
-
-			//            dbCreate = "update"
-			//            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-			//            pooled = true
-			//            properties {
-			//               maxActive = -1
-			//               minEvictableIdleTimeMillis=1800000
-			//               timeBetweenEvictionRunsMillis=1800000
-			//               numTestsPerEvictionRun=3
-			//               testOnBorrow=true
-			//               testWhileIdle=true
-			//               testOnReturn=true
-			//               validationQuery="SELECT 1"
-		}
-	}
+	
 }
