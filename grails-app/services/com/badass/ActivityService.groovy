@@ -21,7 +21,7 @@ class ActivityService {
 			detail.user = user;
 			detail.act = act;
 			detail.amount = act.amount/users.size();
-			detail.balance = uBalance.balance+detail.amount;
+			detail.balance = user.balance+detail.amount;
 			user.balance = detail.balance;
 			detail.name = act.name;
 			detail.act = act;
