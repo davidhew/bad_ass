@@ -53,8 +53,10 @@ class ActivityController {
     }
 
     def update(Long id, Long version) {
+		
         def activityInstance = Activity.get(id)
-        if (!activityInstance) {
+        
+		if (!activityInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'activity.label', default: 'Activity'), id])
             redirect(action: "list")
             return
@@ -70,9 +72,9 @@ class ActivityController {
             }
         }
 
-        activityInstance.properties = params
+        Activity newAct = new Activity(params)
 
-        if (!activityInstance.save(flush: true)) {
+        if (!activityService.updateAct(activityInstance,newAct)) {
             render(view: "edit", model: [activityInstance: activityInstance])
             return
         }

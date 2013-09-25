@@ -14,7 +14,9 @@ class ActivityDetail {
 	//活动名称，和Activity中的name 冗余，提高性能，避免为了知道活动名称而去走activity表
 	String name;
 	//活动发生时间
-	Date date = new Date();
+	Date actDate = new Date();
+	//录入时间
+	Date enterDate = new Date();
 	
 	//对应到该会员身上的费用
 	double amount;
@@ -28,7 +30,7 @@ class ActivityDetail {
 		amount blank: false, nullable: false
 		name maxSize:128,blank: false, nullable: false
 		user nullable: false
-		
+		actDate nullable: false
 		
 	}
 	

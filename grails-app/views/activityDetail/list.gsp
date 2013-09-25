@@ -32,7 +32,7 @@
 					
 						<g:sortableColumn property="balance" title="${message(code: 'activityDetail.balance.label', default: 'Balance')}" />
 					
-						<g:sortableColumn property="date" title="${message(code: 'activityDetail.date.label', default: 'Date')}" />
+						<g:sortableColumn property="actDate" title="${message(code: 'activityDetail.date.label', default: 'Date')}" />
 					
 					</tr>
 				</thead>
@@ -48,7 +48,7 @@
 					
 						<td>${fieldValue(bean: activityDetailInstance, field: "balance")}</td>
 					
-						<td><g:formatDate date="${activityDetailInstance.date}" /></td>
+						<td><g:formatDate date="${activityDetailInstance.actDate}" /></td>
 					
 					</tr>
 				</g:each>

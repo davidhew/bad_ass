@@ -24,23 +24,23 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="amount" title="${message(code: 'activity.amount.label', default: 'Amount')}" />
+					    <g:sortableColumn property="name" title="${message(code: 'activity.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="name" title="${message(code: 'activity.name.label', default: 'Name')}" />
+						<g:sortableColumn property="amount" title="${message(code: 'activity.amount.label', default: 'Amount')}" />
 					
 						<g:sortableColumn property="actDate" title="${message(code: 'activity.actDate.label', default: 'Act Date')}" />
 					
 						<g:sortableColumn property="comment" title="${message(code: 'activity.comment.label', default: 'Comment')}" />
-					
+						
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${activityInstanceList}" status="i" var="activityInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${activityInstance.id}">${fieldValue(bean: activityInstance, field: "amount")}</g:link></td>
+						<td><g:link action="show" id="${activityInstance.id}">${fieldValue(bean: activityInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: activityInstance, field: "name")}</td>
+						<td>${fieldValue(bean: activityInstance, field: "amount")}</td>
 					
 						<td><g:formatDate date="${activityInstance.actDate}" /></td>
 					

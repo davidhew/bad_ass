@@ -16,17 +16,24 @@ class Activity {
 	//活动日期
 	Date actDate = new Date();
 	
-	//参与者，至少会有一个人
-	static hasMany = [actors: User]
+	//录入时间，默认为当前系统时间
+	Date enterDate = new Date();
 	
-	//对应的活动明细
-	static hashMany = [details:ActivityDetail]
+	//参与者，至少会有一个人
+	static hasMany = [actors: User,details : ActivityDetail]
 	
 	//活动备注
 	String comment;
 	
 	//活动的费用，用正值表明增加多少钱，负值表明要扣掉多少钱
 	double amount;
+	
+	static mapping={
+		//如果活动明细从一个活动中remove了，则该活动明细会自动删除
+		details cascade: 'all-delete-orphan'
+		//update的时候，需要重新取要被更新的activity，而不希望从cache中取。
+		cache false
+	}
 	
 	static constraints = {
 		amount blank: false, nullable: false
