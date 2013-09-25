@@ -25,7 +25,7 @@
 			
 				<g:if test="${activityInstance?.amount}">
 				<li class="fieldcontain">
-					<span id="amount-label" class="property-label"><g:message code="activity.amount.label" default="Amount" /></span>
+					<span id="amount-label" class="property-label"><g:message code="amount.label" default="Amount" /></span>
 					
 						<span class="property-value" aria-labelledby="amount-label"><g:fieldValue bean="${activityInstance}" field="amount"/></span>
 					
@@ -43,16 +43,16 @@
 			
 				<g:if test="${activityInstance?.actDate}">
 				<li class="fieldcontain">
-					<span id="actDate-label" class="property-label"><g:message code="activity.actDate.label" default="Act Date" /></span>
+					<span id="actDate-label" class="property-label"><g:message code="actDate.label" default="Act Date" /></span>
 					
-						<span class="property-value" aria-labelledby="actDate-label"><g:formatDate date="${activityInstance?.actDate}" /></span>
+						<span class="property-value" aria-labelledby="actDate-label"><g:formatDate format="yyyy-MM-dd" date="${activityInstance?.actDate}" /></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${activityInstance?.actors}">
 				<li class="fieldcontain">
-					<span id="actors-label" class="property-label"><g:message code="activity.actors.label" default="Actors" /></span>
+					<span id="actors-label" class="property-label"><g:message code="actors.label" default="Actors" /></span>
 					
 						<g:each in="${activityInstance.actors}" var="a">
 						<span class="property-value" aria-labelledby="actors-label"><g:link controller="user" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
@@ -63,7 +63,7 @@
 			
 				<g:if test="${activityInstance?.comment}">
 				<li class="fieldcontain">
-					<span id="comment-label" class="property-label"><g:message code="activity.comment.label" default="Comment" /></span>
+					<span id="comment-label" class="property-label"><g:message code="comment.label" default="Comment" /></span>
 					
 						<span class="property-value" aria-labelledby="comment-label"><g:fieldValue bean="${activityInstance}" field="comment"/></span>
 					

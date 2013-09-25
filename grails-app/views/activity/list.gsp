@@ -24,13 +24,13 @@
 				<thead>
 					<tr>
 					
-					    <g:sortableColumn property="name" title="${message(code: 'activity.name.label', default: 'Name')}" />
+					    <g:sortableColumn property="name" title="${message(code: 'name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="amount" title="${message(code: 'activity.amount.label', default: 'Amount')}" />
+						<g:sortableColumn property="amount" title="${message(code: 'amount.label', default: 'Amount')}" />
 					
-						<g:sortableColumn property="actDate" title="${message(code: 'activity.actDate.label', default: 'Act Date')}" />
+						<g:sortableColumn property="actDate" title="${message(code: 'actDate.label', default: 'Act Date')}" />
 					
-						<g:sortableColumn property="comment" title="${message(code: 'activity.comment.label', default: 'Comment')}" />
+						<g:sortableColumn property="comment" title="${message(code: 'comment.label', default: 'Comment')}" />
 						
 					</tr>
 				</thead>
@@ -42,7 +42,7 @@
 					
 						<td>${fieldValue(bean: activityInstance, field: "amount")}</td>
 					
-						<td><g:formatDate date="${activityInstance.actDate}" /></td>
+						<td><g:formatDate format="yyyy-MM-dd" date="${activityInstance.actDate}" /></td>
 					
 						<td>${fieldValue(bean: activityInstance, field: "comment")}</td>
 					

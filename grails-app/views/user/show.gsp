@@ -25,7 +25,7 @@
 			
 				<g:if test="${userInstance?.nick}">
 				<li class="fieldcontain">
-					<span id="nick-label" class="property-label"><g:message code="user.nick.label" default="Nick" /></span>
+					<span id="nick-label" class="property-label"><g:message code="nick.label" default="Nick" /></span>
 					
 						<span class="property-value" aria-labelledby="nick-label"><g:fieldValue bean="${userInstance}" field="nick"/></span>
 					
@@ -43,7 +43,7 @@
 			
 				<g:if test="${userInstance?.birdthDate}">
 				<li class="fieldcontain">
-					<span id="birdthDate-label" class="property-label"><g:message code="user.birdthDate.label" default="Birdth Date" /></span>
+					<span id="birdthDate-label" class="property-label"><g:message code="birdthDate.label" default="Birdth Date" /></span>
 					
 						<span class="property-value" aria-labelledby="birdthDate-label"><g:formatDate date="${userInstance?.birdthDate}" /></span>
 					
@@ -61,7 +61,7 @@
 			
 				<g:if test="${userInstance?.balance}">
 				<li class="fieldcontain">
-					<span id="balance-label" class="property-label"><g:message code="user.balance.label" default="Balance" /></span>
+					<span id="balance-label" class="property-label"><g:message code="balance.label" default="Balance" /></span>
 					
 						<span class="property-value" aria-labelledby="balance-label"><g:fieldValue bean="${userInstance}" field="balance"/></span>
 					
@@ -70,7 +70,7 @@
 			
 				<g:if test="${userInstance?.sex}">
 				<li class="fieldcontain">
-					<span id="sex-label" class="property-label"><g:message code="user.sex.label" default="Sex" /></span>
+					<span id="sex-label" class="property-label"><g:message code="sex.label" default="Sex" /></span>
 					
 						<span class="property-value" aria-labelledby="sex-label"><g:fieldValue bean="${userInstance}" field="sex"/></span>
 					
@@ -82,7 +82,6 @@
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />
 					<g:link class="edit" action="edit" id="${userInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
 		</div>

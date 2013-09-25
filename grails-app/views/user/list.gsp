@@ -24,17 +24,17 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="nick" title="${message(code: 'user.nick.label', default: 'Nick')}" />
+						<g:sortableColumn property="nick" title="${message(code: 'nick.label', default: 'Nick')}" />
 					
 						<g:sortableColumn property="name" title="${message(code: 'user.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="birdthDate" title="${message(code: 'user.birdthDate.label', default: 'Birdth Date')}" />
+						<g:sortableColumn property="birdthDate" title="${message(code: 'birdthDate.label', default: 'Birdth Date')}" />
 					
 						<g:sortableColumn property="joinDate" title="${message(code: 'user.joinDate.label', default: 'Join Date')}" />
 					
-						<g:sortableColumn property="balance" title="${message(code: 'user.balance.label', default: 'Balance')}" />
+						<g:sortableColumn property="balance" title="${message(code: 'balance.label', default: 'Balance')}" />
 					
-						<g:sortableColumn property="sex" title="${message(code: 'user.sex.label', default: 'Sex')}" />
+						<g:sortableColumn property="sex" title="${message(code: 'sex.label', default: 'Sex')}" />
 					
 					</tr>
 				</thead>

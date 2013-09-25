@@ -41,6 +41,10 @@ class ActivityService {
 			oldAct.addToActors(newU)
 			newU.save();
 		}
+		oldAct.amount = newAct.amount;
+		oldAct.comment = newAct.comment;
+		oldAct.actDate = newAct.actDate;
+		oldAct.enterDate = new Date();
 		oldAct.save();
 		
 		return true;

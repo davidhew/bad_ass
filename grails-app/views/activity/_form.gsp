@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: activityInstance, field: 'amount', 'error')} required">
 	<label for="amount">
-		<g:message code="activity.amount.label" default="Amount" />
+		<g:message code="amount.label" default="Amount" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="amount" value="${fieldValue(bean: activityInstance, field: 'amount')}" required=""/>
@@ -20,7 +20,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: activityInstance, field: 'actDate', 'error')} required">
 	<label for="actDate">
-		<g:message code="activity.actDate.label" default="Act Date" />
+		<g:message code="actDate.label" default="Act Date" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="actDate" precision="day"  value="${activityInstance?.actDate}"  />
@@ -28,7 +28,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: activityInstance, field: 'actors', 'error')} ">
 	<label for="actors">
-		<g:message code="activity.actors.label" default="Actors" />
+		<g:message code="actors.label" default="Actors" />
 		
 	</label>
 	<g:select name="actors" from="${com.badass.User.list()}" multiple="multiple" optionKey="id" size="5" value="${activityInstance?.actors*.id}" class="many-to-many"/>
