@@ -1,0 +1,17 @@
+Testsuite: com.badass.ActivityDetailServiceTests
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.471 sec
+------------- Standard Output ---------------
+--Output from testSearchAll--
+Hibernate: select this_.id as id4_0_, this_.version as version4_0_, this_.act_id as act3_4_0_, this_.act_date as act4_4_0_, this_.amount as amount4_0_, this_.balance as balance4_0_, this_.enter_date as enter7_4_0_, this_.name as name4_0_, this_.user_id as user9_4_0_ from activity_detail this_ where (this_.name like ?) limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_
+--Output from testSearchByDateRanges--
+Hibernate: select this_.id as id4_0_, this_.version as version4_0_, this_.act_id as act3_4_0_, this_.act_date as act4_4_0_, this_.amount as amount4_0_, this_.balance as balance4_0_, this_.enter_date as enter7_4_0_, this_.name as name4_0_, this_.user_id as user9_4_0_ from activity_detail this_ where 1=1 limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testSearchAll--
+--Output from testSearchByDateRanges--
+------------- ---------------- ---------------
+
+Testcase: testSearchAll took 0.418 sec
+Testcase: testSearchByDateRanges took 0.034 sec

@@ -4,6 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class ActivityDetailController {
 
+	def activityDetailService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -14,6 +15,13 @@ class ActivityDetailController {
         params.max = Math.min(max ?: 10, 100)
         [activityDetailInstanceList: ActivityDetail.list(params), activityDetailInstanceTotal: ActivityDetail.count()]
     }
+	
+	def search(){
+		def results = activityDetailService.search(params)
+
+		render(view:'list',model:[activityDetailInstanceList:results,activityDetailInstanceTotal:results.size(),params:params])
+		return
+	}
 
     def create() {
         [activityDetailInstance: new ActivityDetail(params)]

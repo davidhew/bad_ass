@@ -1,0 +1,311 @@
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+                    Test - ActivityServiceTests</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="../../stylesheet.css">
+</head>
+<body>
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="../../index.html">
+<div class="grailslogo"></div>
+</a>
+<h1>ActivityServiceTests</h1>
+<h2>Package: com.badass</h2>
+</div>
+<div class="grid_2">
+<nav id="navigationlinks">
+<p>
+<a href="../../failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="../../index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="../../all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite success">
+<div class="header">
+<h2>ActivityServiceTests</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testCreateAct">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testCreateAct</b>
+</p>
+<p class="summary">Executed in 0.166 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testUpdateAct">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testUpdateAct</b>
+</p>
+<p class="summary">Executed in 0.277 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from testCreateAct--
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: insert into activity (version, act_date, amount, comment, enter_date, name) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id0_0_, this_.version as version0_0_, this_.act_date as act3_0_0_, this_.amount as amount0_0_, this_.comment as comment0_0_, this_.enter_date as enter6_0_0_, this_.name as name0_0_ from activity this_ where this_.name=? limit ?
+--Output from testUpdateAct--
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: insert into activity (version, act_date, amount, comment, enter_date, name) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id0_0_, this_.version as version0_0_, this_.act_date as act3_0_0_, this_.amount as amount0_0_, this_.comment as comment0_0_, this_.enter_date as enter6_0_0_, this_.name as name0_0_ from activity this_ where this_.name=? limit ?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update activity set version=?, act_date=?, amount=?, comment=?, enter_date=?, name=? where id=? and version=?
+Hibernate: delete from activity_user where activity_actors_id=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activity0_.id as id0_1_, activity0_.version as version0_1_, activity0_.act_date as act3_0_1_, activity0_.amount as amount0_1_, activity0_.comment as comment0_1_, activity0_.enter_date as enter6_0_1_, activity0_.name as name0_1_, details1_.act_id as act3_0_3_, details1_.id as id3_, details1_.id as id4_0_, details1_.version as version4_0_, details1_.act_id as act3_4_0_, details1_.act_date as act4_4_0_, details1_.amount as amount4_0_, details1_.balance as balance4_0_, details1_.enter_date as enter7_4_0_, details1_.name as name4_0_, details1_.user_id as user9_4_0_ from activity activity0_ left outer join activity_detail details1_ on activity0_.id=details1_.act_id where activity0_.id=?
+Hibernate: delete from activity_user where activity_actors_id=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity where id=? and version=?
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from testCreateAct--
+--Output from testUpdateAct--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
+            Parses JUnit output and associates it with the corresponding test case
+        -->
+<script language="javascript">
+
+
+/**
+ * The JUnit report format is incredibly stuipd in the
+ * sense that it accumulates output from all test methods
+ * into a single xml node.
+ */
+(function() {
+
+    var outputElements = findOutputElements();
+    for (var i in outputElements) {
+        var outputElement = outputElements[i];
+        var textOutput = outputElement.element.firstChild.nodeValue;
+        var header = outputElement.getHeader();
+        appendTestMethodOutput(textOutput, header);
+    }
+
+    function findOutputElements() {
+        var outputElements = [];
+        var preElements = document.getElementsByTagName("pre");
+        for (var i in preElements) {
+            var preElement = preElements[i];
+            var className = preElement.className || "";
+            if (className.indexOf("stdout") >= 0) {
+                var outputElement = new OutputElement(preElement, "output");
+                outputElements.push(outputElement);
+            } else if (className.indexOf("syserr") >= 0) {
+                var outputElement = new OutputElement(preElement, "error");
+                outputElements.push(outputElement);
+            }
+        }
+
+        return outputElements;
+    }
+
+    function OutputElement(element, type) {
+        this.element = element;
+        this.type = type;
+
+        this.getHeader = function() {
+            if (type === "output") {
+                return "System output";
+            } else if ("error") {
+                return "System error";
+            }
+        }
+    }
+
+    function appendTestMethodOutput(text, header) {
+        var testOutput = new TestMethodOutput(header);
+
+        var lines = text.split(/\r\n|\r|\n/);
+        for (var i in lines) {
+            var line = lines[i];
+            var matches = line.match(/^--Output from (.*)--$/);
+            if (matches !== null && matches.length == 2) {
+                testOutput.flushToDom();
+                testOutput.testName = matches[1];
+            } else {
+                testOutput.addLine(line);
+            }
+        }
+
+        testOutput.flushToDom();
+    }
+
+    function TestMethodOutput(header) {
+        this.header = header;
+        this.testName = undefined;
+        this.buffer = "";
+
+        this.addLine = function(line) {
+            this.buffer += line + "\n";
+        }
+
+        this.flushToDom = function() {
+            if (this.testName !== undefined) {
+                var domNode = getTestcaseElementByName(this.testName);
+                if (domNode !== undefined && trimString(this.buffer).length > 0) {
+                    this.appendTo(domNode);
+                }
+
+                this.reset();
+            }
+        }
+
+        this.appendTo = function(domNode) {
+            var node = document.createElement("div");
+            node.innerHTML = '<p><b class="message">' + header + '</b></p>';
+
+            var preNode = document.createElement("pre");
+            preNode.appendChild(document.createTextNode(this.buffer));
+            node.appendChild(preNode);
+
+            var outputContainer = findElementByTagClassAndParent("div", "outputinfo", domNode);
+            outputContainer.appendChild(node);
+        }
+
+        this.reset = function() {
+            this.methodName = undefined;
+            this.buffer = "";
+        }
+    }
+
+    function getTestcaseElementByName(name) {
+        var divElements = document.getElementsByTagName("div");
+        var elementCount = divElements.length;
+        for (var i=0; i<elementCount; i++) {
+            var el = divElements[i];
+            if (el.getAttribute("data-name") === name) {
+                return el;
+            }
+        }
+    }
+
+    function findElementByTagClassAndParent(tagName, className, parentNode) {
+        var elements = parentNode.getElementsByTagName(tagName);
+        for (var i in elements) {
+            var element = elements[i];
+
+            // Not 100% correct, but good enough here
+            if (element.className !== undefined && element.className.indexOf(className) >= 0) {
+                return element;
+            }
+        }
+    }
+
+    function trimString(str) {
+        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    }
+
+})();
+
+        </script>
+</body>
+</html>

@@ -9,7 +9,14 @@ import com.bass.util.LanguageUtil
  */
 class ActivityService {
 	
-	
+	/**
+	 * 还没完全吃透grails和hibernate
+	 * 所以对于act的编辑，采取这样的逻辑，让oldAct代表在数据库存在的，已经持久化的要修改的活动；
+	 * 而newAct代表了用户对oldAct的修改后的信息，但是newAct 没有持久化
+	 * @param oldAct
+	 * @param newAct
+	 * @return
+	 */
 	def updateAct(Activity oldAct,Activity newAct){
 		
 		Set<User> oldUsers = oldAct.actors;
@@ -26,48 +33,53 @@ class ActivityService {
 		oldAct.details.clear()
 		oldAct.actors.clear();
 		
+		//把新的编辑后的活动属性拷贝给oldAct
+		oldAct.properties = newAct.properties;
 		for(User newU:newUsers){
 			//很可能oldU里面有和newU重合的，则其金额在上面发生了改变
 			newU.refresh();
-			ActivityDetail detail = new ActivityDetail();
-			detail.user = newU;
-			detail.act = newAct;
-			detail.amount = newDetailAmount;
-			detail.balance = newU.balance+detail.amount;
-			newU.balance = detail.balance;
-			detail.name = newAct.name;
-			detail.act = newAct;
-			oldAct.addToDetails(detail)
-			oldAct.addToActors(newU)
+			generateActDetail(oldAct, newU, newUsers.size())
 			newU.save();
 		}
-		oldAct.amount = newAct.amount;
-		oldAct.comment = newAct.comment;
-		oldAct.actDate = newAct.actDate;
+
+		
 		oldAct.enterDate = new Date();
-		oldAct.save();
+		oldAct.save(failOnError:true);
 		
 		return true;
 	}
+	
+
 	
 	def createActivity(Activity act){
 		Set<User> users = act.actors;
 		
 		for(User user:users){
 			
-			ActivityDetail detail = new ActivityDetail();
-			detail.user = user;
-			detail.act = act;
-			detail.amount = act.amount/users.size();
-			detail.balance = user.balance+detail.amount;
-			user.balance = detail.balance;
-			detail.name = act.name;
-			detail.act = act;
-			act.addToDetails(detail);
+			generateActDetail(act, user, users.size())
 			
-			user.save();
 		}
-		act.save();
+		act.save(failOnError:true);
+		
+	}
+	
+	def generateActDetail(Activity act,User user, int userCount){
+		ActivityDetail detail = new ActivityDetail();
+		detail.user = user;
+		detail.act = act;
+		detail.amount = act.amount/userCount;
+		detail.balance = user.balance+detail.amount;
+		user.balance = detail.balance;
+		detail.name = getDetailName(act.name,user);
+		detail.act = act;
+		detail.actDate = act.actDate;
+		act.addToDetails(detail);
+		
+	}
+	
+	static def getDetailName(String actName,User user){
+		
+		return user.nick + "-" + actName; 
 	}
 	
 

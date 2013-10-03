@@ -29,8 +29,9 @@ class Activity {
 	double amount;
 	
 	static mapping={
-		//如果活动明细从一个活动中remove了，则该活动明细会自动删除
-		details cascade: 'all-delete-orphan'
+		//如果活动明细从一个活动中remove了，则该活动明细会自动删除;在更新一个活动时，会用到这种cascade；
+		//delete 是为了方便些单元测试，在正常业务流程中还没被用到
+		details cascade: 'delete,all-delete-orphan'
 		//update的时候，需要重新取要被更新的activity，而不希望从cache中取。
 		cache false
 	}
@@ -39,6 +40,7 @@ class Activity {
 		amount blank: false, nullable: false
 		name maxSize:128,blank: false, nullable: false
 		actDate nullable: false
+		comment nullable:true
 		
 	}
 	

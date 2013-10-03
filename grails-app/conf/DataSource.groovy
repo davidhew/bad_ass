@@ -36,22 +36,41 @@ environments {
 	}
 	test {
 		dataSource {
+			//dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+			//url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
 			dbCreate = "create-drop"
 			logSql = true
-			url = "jdbc:mysql://localhost/pure_water"
-			username = "root"
-			password = "1234567"
+			url = "jdbc:mysql://localhost/bad_ass?useUnicode=true&amp;characterEncoding=utf-8"
+			username = "pure_water"
+			password = "1345&*eqte"
 		}
 
 	
 	}
+
+// 非常态，只有真正要做数据订正时才开启
+//	datafix {
+//		dataSource {
+//			//dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+//			//url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+//			dbCreate = "update"
+//			logSql = true
+//			url = "jdbc:mysql://localhost/bad_ass?useUnicode=true&amp;characterEncoding=utf-8"
+//			username = "pure_water"
+//			password = "1345&*eqte"
+//		}
+//
+//	
+//	}
 	localtest {
 		dataSource {
+			//dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+			//url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
 			dbCreate = "create-drop"
 			logSql = true
-			url = "jdbc:mysql://localhost/ccclubs"
-			username = "root"
-			password = "ccclubs2013"
+			url = "jdbc:mysql://localhost/bad_ass?useUnicode=true&amp;characterEncoding=utf-8"
+			username = "pure_water"
+			password = "1345&*eqte"
 		}
 	}
 

@@ -16,6 +16,7 @@ class ActivityController {
     }
 
     def create() {
+		log.error(params)
         [activityInstance: new Activity(params)]
     }
 

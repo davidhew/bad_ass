@@ -31,6 +31,7 @@ class ActivityDetail {
 		name maxSize:128,blank: false, nullable: false
 		user nullable: false
 		actDate nullable: false
+		enterDate nullable: false
 		
 	}
 	

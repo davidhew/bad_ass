@@ -15,10 +15,38 @@
 			</ul>
 		</div>
 		<div id="list-activityDetail" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
+		<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			<g:form action="search" method="post">
+				<div class="dialog">
+					<table>
+						<tr class="prop">
+							<td valign="top" class='name'>
+								<lable for='name'>${message(code: 'name.label', default: 'Name')}</lable>
+							</td>
+							<td valign="top" class='value'>
+								<input type="text" maxLength="30" name='name' value='${params?.name}'/>
+							</td>
+						</tr>
+						<tr class='prop'>
+						<td valign="top" class='name'>
+								<lable for='date'>${message(code: 'actDate.label', default: 'Date')}</lable>
+							</td>
+							<td valign="top" class='value'>
+								<g:datePicker name='beginDate' precision='day' value='${params?.beginDate ?params.beginDate:new Date().plus(-31)}'/> ~ <g:datePicker name='endDate' precision='day' value='${params?.endDate ? params.endDate:new Date().plus(1)}'/>
+							</td>
+							
+							<td valign='top' class="menuButton">
+								<input type='submit' value='${message(code:'search.lable', default :'Search')}' class="formbutton"/>
+					       </td>
+						</tr>
+						
+					  
+					   </table>
+					       
+			</g:form>
+			
 			<table>
 				<thead>
 					<tr>

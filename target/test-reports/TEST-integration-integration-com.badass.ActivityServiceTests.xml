@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="ali-22039" name="com.badass.ActivityServiceTests" tests="2" time="0.449" timestamp="2013-10-03T13:57:50">
+  <properties />
+  <testcase classname="com.badass.ActivityServiceTests" name="testCreateAct" time="0.166" />
+  <testcase classname="com.badass.ActivityServiceTests" name="testUpdateAct" time="0.277" />
+  <system-out><![CDATA[--Output from testCreateAct--
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: insert into activity (version, act_date, amount, comment, enter_date, name) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id0_0_, this_.version as version0_0_, this_.act_date as act3_0_0_, this_.amount as amount0_0_, this_.comment as comment0_0_, this_.enter_date as enter6_0_0_, this_.name as name0_0_ from activity this_ where this_.name=? limit ?
+--Output from testUpdateAct--
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: insert into activity (version, act_date, amount, comment, enter_date, name) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select this_.id as id0_0_, this_.version as version0_0_, this_.act_date as act3_0_0_, this_.amount as amount0_0_, this_.comment as comment0_0_, this_.enter_date as enter6_0_0_, this_.name as name0_0_ from activity this_ where this_.name=? limit ?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id5_0_, user0_.version as version5_0_, user0_.balance as balance5_0_, user0_.birdth_date as birdth4_5_0_, user0_.join_date as join5_5_0_, user0_.name as name5_0_, user0_.nick as nick5_0_, user0_.sex as sex5_0_ from user user0_ where user0_.id=?
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into activity_detail (version, act_id, act_date, amount, balance, enter_date, name, user_id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update user set version=?, balance=?, birdth_date=?, join_date=?, name=?, nick=?, sex=? where id=? and version=?
+Hibernate: update activity set version=?, act_date=?, amount=?, comment=?, enter_date=?, name=? where id=? and version=?
+Hibernate: delete from activity_user where activity_actors_id=?
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: insert into activity_user (activity_actors_id, user_id) values (?, ?)
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_ where this_.nick=? limit ?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activityde0_.id as id4_0_, activityde0_.version as version4_0_, activityde0_.act_id as act3_4_0_, activityde0_.act_date as act4_4_0_, activityde0_.amount as amount4_0_, activityde0_.balance as balance4_0_, activityde0_.enter_date as enter7_4_0_, activityde0_.name as name4_0_, activityde0_.user_id as user9_4_0_ from activity_detail activityde0_ where activityde0_.id=?
+Hibernate: select activity0_.id as id0_1_, activity0_.version as version0_1_, activity0_.act_date as act3_0_1_, activity0_.amount as amount0_1_, activity0_.comment as comment0_1_, activity0_.enter_date as enter6_0_1_, activity0_.name as name0_1_, details1_.act_id as act3_0_3_, details1_.id as id3_, details1_.id as id4_0_, details1_.version as version4_0_, details1_.act_id as act3_4_0_, details1_.act_date as act4_4_0_, details1_.amount as amount4_0_, details1_.balance as balance4_0_, details1_.enter_date as enter7_4_0_, details1_.name as name4_0_, details1_.user_id as user9_4_0_ from activity activity0_ left outer join activity_detail details1_ on activity0_.id=details1_.act_id where activity0_.id=?
+Hibernate: delete from activity_user where activity_actors_id=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity_detail where id=? and version=?
+Hibernate: delete from activity where id=? and version=?
+]]></system-out>
+  <system-err><![CDATA[--Output from testCreateAct--
+--Output from testUpdateAct--
+]]></system-err>
+</testsuite>

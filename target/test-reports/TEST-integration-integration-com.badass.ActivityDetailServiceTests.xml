@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="ali-22039" name="com.badass.ActivityDetailServiceTests" tests="2" time="0.471" timestamp="2013-10-03T13:57:49">
+  <properties />
+  <testcase classname="com.badass.ActivityDetailServiceTests" name="testSearchAll" time="0.418" />
+  <testcase classname="com.badass.ActivityDetailServiceTests" name="testSearchByDateRanges" time="0.034" />
+  <system-out><![CDATA[--Output from testSearchAll--
+Hibernate: select this_.id as id4_0_, this_.version as version4_0_, this_.act_id as act3_4_0_, this_.act_date as act4_4_0_, this_.amount as amount4_0_, this_.balance as balance4_0_, this_.enter_date as enter7_4_0_, this_.name as name4_0_, this_.user_id as user9_4_0_ from activity_detail this_ where (this_.name like ?) limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_
+--Output from testSearchByDateRanges--
+Hibernate: select this_.id as id4_0_, this_.version as version4_0_, this_.act_id as act3_4_0_, this_.act_date as act4_4_0_, this_.amount as amount4_0_, this_.balance as balance4_0_, this_.enter_date as enter7_4_0_, this_.name as name4_0_, this_.user_id as user9_4_0_ from activity_detail this_ where 1=1 limit ?
+Hibernate: select this_.id as id5_0_, this_.version as version5_0_, this_.balance as balance5_0_, this_.birdth_date as birdth4_5_0_, this_.join_date as join5_5_0_, this_.name as name5_0_, this_.nick as nick5_0_, this_.sex as sex5_0_ from user this_
+]]></system-out>
+  <system-err><![CDATA[--Output from testSearchAll--
+--Output from testSearchByDateRanges--
+]]></system-err>
+</testsuite>
