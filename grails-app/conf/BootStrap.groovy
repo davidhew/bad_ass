@@ -50,9 +50,9 @@ class BootStrap {
 				initAll()
 			}
 //			非常态，只有要做数据订正时才开启
-//			datafix{
-//				dataFixAll()
-//			}
+			datafix{
+				dataFixAll()
+			}
 		}
     }
 	

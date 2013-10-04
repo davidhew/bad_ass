@@ -37,6 +37,12 @@
 								<g:datePicker name='beginDate' precision='day' value='${params?.beginDate ?params.beginDate:new Date().plus(-31)}'/> ~ <g:datePicker name='endDate' precision='day' value='${params?.endDate ? params.endDate:new Date().plus(1)}'/>
 							</td>
 							
+							<td valign="top" class='name'>
+								<lable for='amount'>${message(code: 'actDetail.amount.type.label', default: 'Type')}</lable>
+							</td>	
+							<td valign="top" class='value'>
+								<g:select optionKey="amountType" optionValue="amountTypeValue" from="${[[amountType:'all',amountTypeValue:"${message(code: 'actDetail.amount.type.all.label', default: 'All')}"],[amountType:'all',amountTypeValue:"${message(code: 'actDetail.amount.type.positive.label', default: 'Positive')}"],[amountType:'negative',amountTypeValue:"${message(code: 'actDetail.amount.type.negative.label', default: 'Negative')}"]]}" name="amountType" value="${params.amountType}"></g:select> 
+							</td>
 							<td valign='top' class="menuButton">
 								<input type='submit' value='${message(code:'search.lable', default :'Search')}' class="formbutton"/>
 					       </td>
