@@ -24,9 +24,9 @@ class ActivityDetailService {
 				//处理查询充值还是花销记录的逻辑
 				if(params.amountType){
 					if(params.amountType.equals("positive")){
-						ge('amount',0)
+						ge('amount',(double)0.0)
 					}else if(params.amountType.equals("negative")){
-						le('amount',0)
+						le('amount',(double)0.0)
 					}
 					
 				}
